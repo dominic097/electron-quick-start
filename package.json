@@ -1,12 +1,15 @@
 {
   "name": "electron-quick-start",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/dominic097/electron-quick-start",
   "keywords": [
     "Electron",
     "quick",
@@ -17,6 +20,24 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^29.1.0"
+    "@electron-forge/cli": "^7.3.0",
+    "@electron-forge/maker-deb": "^7.3.0",
+    "@electron-forge/maker-rpm": "^7.3.0",
+    "@electron-forge/maker-squirrel": "^7.3.0",
+    "@electron-forge/maker-zip": "^7.3.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.3.0",
+    "@electron-forge/publisher-github": "^7.3.0",
+    "electron": "^29.1.0",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "@electron-forge/plugin-fuses": "^7.3.0",
+    "dotenv": "^16.4.5",
+    "electron-log": "^5.1.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^6.1.8"
+  },
+  "build": {
+    "publish": "always"
   }
 }
